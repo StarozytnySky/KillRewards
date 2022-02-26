@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="KillRewards:jar">
+    <output-path>$PROJECT_DIR$/../../../..</output-path>
+    <root id="archive" name="KillRewards.jar">
+      <element id="module-output" name="KillRewards" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/kangarko/Foundation/5.12.5/Foundation-5.12.5.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
