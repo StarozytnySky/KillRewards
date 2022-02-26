@@ -1,0 +1,7 @@
+Command_Aliases:
+  - 'killrewards'
+
+Prefix: "&f[&3KillRewards&f]"
+
+# Internal version number. Do not change!
+Version: 1

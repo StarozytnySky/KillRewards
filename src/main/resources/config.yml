@@ -1,0 +1,84 @@
+Settings:
+  Rewards:
+    default:
+      experience: 1
+      points:
+        add: 1
+        remove: 1
+      money: 1
+    vip:
+      experience: 3
+      points:
+        add: 1
+        remove: 1
+      money: 2
+    svip:
+      experience: 4
+      points:
+        add: 1
+        remove: 1
+      money: 3
+    mvip:
+      experience: 6
+      points:
+        add: 1
+        remove: 1
+      money: 5
+  Commands:
+    experience: "alonsolevels addexp"
+    money: "mysterydust add"
+    points:
+      add: "alonsoleagues addpoints"
+      remove: "alonsoleagues removepoints"
+
+Messages:
+  default:
+    victim:
+      - "&c{victim} &zostal zabity przez &3{killer}"
+      - " "
+      - "                &f-{points_remove} punkt &7(Smierc)"
+      - " "
+    killer:
+      - "&c{victim} &zostal zabity przez &3{killer}"
+      - " "
+      - "&d{experience}   &f+{points_add}   &e{money} &7(Zabojstwo)"
+      - " "
+  vip:
+    victim:
+      - "&c{victim} &zostal zabity przez &3{killer}"
+      - " "
+      - "                &f-{points_remove} punkt &7(Smierc)"
+      - " "
+    killer:
+      - "&c{victim} &zostal zabity przez &3{killer}"
+      - " "
+      - "&d{experience}   &f+{points_add}   &e{money} &7(Zabojstwo)"
+      - " "
+      - "                                      &b(Mnoznik: 20%)"
+      - " "
+  svip:
+    victim:
+      - "&c{victim} &zostal zabity przez &3{killer}"
+      - " "
+      - "                &f-{points_remove} punkt &7(Smierc)"
+      - " "
+    killer:
+      - "&c{victim} &zostal zabity przez &3{killer}"
+      - " "
+      - "&d{experience}   &f+{points_add}   &e{money} &7(Zabojstwo)"
+      - " "
+      - "                                      &b(Mnoznik: 50%)"
+      - " "
+  mvip:
+    victim:
+      - "&c{victim} &zostal zabity przez &3{killer}"
+      - " "
+      - "                &f-{points_remove} punkt &7(Smierc)"
+      - " "
+    killer:
+      - "&c{victim} &zostal zabity przez &3{killer}"
+      - " "
+      - "&d{experience}   &f+{points_add}   &e{money} &7(Zabojstwo)"
+      - " "
+      - "                                      &b(Mnoznik: 100%)"
+      - " "
