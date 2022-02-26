@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="AlonsoLeagues-v0.9.1-BETA">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../API/AlonsoLeagues-v0.9.1-BETA.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
