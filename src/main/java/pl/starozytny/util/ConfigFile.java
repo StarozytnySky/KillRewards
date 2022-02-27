@@ -39,10 +39,10 @@ public class ConfigFile extends YamlConfig {
 	public String MVIP_POINTS_REMOVE;
 	public String MVIP_MONEY;
 
-	public String COMMAND_EXPERIENCE;
-	public String COMMAND_MONEY;
-	public String COMMAND_POINTS_ADD;
-	public String COMMAND_POINTS_REMOVE;
+	//public String COMMAND_EXPERIENCE;
+	//public String COMMAND_MONEY;
+	//public String COMMAND_POINTS_ADD;
+	//public String COMMAND_POINTS_REMOVE;
 
 	public List<String> MESSAGES_DEFAULT_VICTIM;
 	public List<String> MESSAGES_DEFAULT_KILLER;
@@ -96,10 +96,10 @@ public class ConfigFile extends YamlConfig {
 		MVIP_POINTS_REMOVE = getString("Settings.Rewards.mvip.points.remove");
 		MVIP_MONEY = getString("Settings.Rewards.mvip.money");
 
-		COMMAND_EXPERIENCE = getString("Settings.Commands.experience");
-		COMMAND_MONEY = getString("Settings.Commands.money");
-		COMMAND_POINTS_ADD = getString("Settings.Commands.points.add");
-		COMMAND_POINTS_REMOVE = getString("Settings.Commands.points.remove");
+		//COMMAND_EXPERIENCE = getString("Settings.Commands.experience");
+		//COMMAND_MONEY = getString("Settings.Commands.money");
+		//COMMAND_POINTS_ADD = getString("Settings.Commands.points.add");
+		//COMMAND_POINTS_REMOVE = getString("Settings.Commands.points.remove");
 
 		MESSAGES_DEFAULT_VICTIM = getStringList("Messages.default.victim");
 		MESSAGES_DEFAULT_KILLER = getStringList("Messages.default.killer");

@@ -24,12 +24,12 @@ Settings:
         add: 1
         remove: 1
       money: 5
-  Commands:
-    experience: "alonsolevels addexp"
-    money: "mysterydust add"
-    points:
-      add: "alonsoleagues addpoints"
-      remove: "alonsoleagues removepoints"
+  #Commands:
+  #  experience: "alonsolevels addexp"
+  #  money: "mysterydust add"
+  #  points:
+  #    add: "alonsoleagues addpoints"
+  #    remove: "alonsoleagues removepoints"
 
 Messages:
   default:

@@ -32,17 +32,15 @@ public class PlayerKill implements Listener {
 			return;
 		}
 
+		if (killer == null) {
+			return;
+		}
+
 		if (PlayerUtil.hasPerm(killer, "mnoznik.gracz")) {
 			AlonsoLevelsAPI.addExperience(killer.getUniqueId(), Integer.parseInt(config.DEFAULT_EXPERIENCE));
 			playerKiller.addMysteryDust(Integer.parseInt(config.DEFAULT_MONEY));
 			AlonsoLeaguesAPI.addPoints(killer.getUniqueId(), Integer.parseInt(config.DEFAULT_POINTS_ADD));
 			AlonsoLeaguesAPI.removePoints(killer.getUniqueId(), Integer.parseInt(config.DEFAULT_POINTS_REMOVE));
-			/*
-			Common.dispatchCommand(Bukkit.getConsoleSender(), config.COMMAND_EXPERIENCE + killer.getName() + config.DEFAULT_EXPERIENCE);
-			Common.dispatchCommand(Bukkit.getConsoleSender(), config.COMMAND_MONEY + killer.getName() + config.DEFAULT_MONEY);
-			Common.dispatchCommand(Bukkit.getConsoleSender(), config.COMMAND_POINTS_ADD + killer.getName() + config.DEFAULT_POINTS_ADD);
-			Common.dispatchCommand(Bukkit.getConsoleSender(), config.COMMAND_POINTS_REMOVE + victim.getName() + config.DEFAULT_POINTS_REMOVE);
- 			*/
 
 			messages_victim = config.MESSAGES_DEFAULT_VICTIM.stream().filter(Objects::nonNull).map(rawList -> rawList.
 					replace("{victim}", victim.getName()).
@@ -68,12 +66,6 @@ public class PlayerKill implements Listener {
 			playerKiller.addMysteryDust(Integer.parseInt(config.VIP_MONEY));
 			AlonsoLeaguesAPI.addPoints(killer.getUniqueId(), Integer.parseInt(config.VIP_POINTS_ADD));
 			AlonsoLeaguesAPI.removePoints(killer.getUniqueId(), Integer.parseInt(config.VIP_POINTS_REMOVE));
-			/*
-			Common.dispatchCommand(Bukkit.getConsoleSender(), config.COMMAND_EXPERIENCE + killer.getName() + config.VIP_EXPERIENCE);
-			Common.dispatchCommand(Bukkit.getConsoleSender(), config.COMMAND_MONEY + killer.getName() + config.VIP_MONEY);
-			Common.dispatchCommand(Bukkit.getConsoleSender(), config.COMMAND_POINTS_ADD + killer.getName() + config.VIP_POINTS_ADD);
-			Common.dispatchCommand(Bukkit.getConsoleSender(), config.COMMAND_POINTS_REMOVE + victim.getName() + config.VIP_POINTS_REMOVE);
-			 */
 
 			messages_victim = config.MESSAGES_VIP_VICTIM.stream().filter(Objects::nonNull).map(rawList -> rawList.
 					replace("{victim}", victim.getName()).
@@ -100,12 +92,6 @@ public class PlayerKill implements Listener {
 			playerKiller.addMysteryDust(Integer.parseInt(config.SVIP_MONEY));
 			AlonsoLeaguesAPI.addPoints(killer.getUniqueId(), Integer.parseInt(config.SVIP_POINTS_ADD));
 			AlonsoLeaguesAPI.removePoints(killer.getUniqueId(), Integer.parseInt(config.SVIP_POINTS_REMOVE));
-			/*
-			Common.dispatchCommand(Bukkit.getConsoleSender(), config.COMMAND_EXPERIENCE + killer.getName() + config.SVIP_EXPERIENCE);
-			Common.dispatchCommand(Bukkit.getConsoleSender(), config.COMMAND_MONEY + killer.getName() + config.SVIP_MONEY);
-			Common.dispatchCommand(Bukkit.getConsoleSender(), config.COMMAND_POINTS_ADD + killer.getName() + config.SVIP_POINTS_ADD);
-			Common.dispatchCommand(Bukkit.getConsoleSender(), config.COMMAND_POINTS_REMOVE + victim.getName() + config.SVIP_POINTS_REMOVE);
-			 */
 
 			messages_victim = config.MESSAGES_SVIP_VICTIM.stream().filter(Objects::nonNull).map(rawList -> rawList.
 					replace("{victim}", victim.getName()).
@@ -131,12 +117,6 @@ public class PlayerKill implements Listener {
 			playerKiller.addMysteryDust(Integer.parseInt(config.MVIP_MONEY));
 			AlonsoLeaguesAPI.addPoints(killer.getUniqueId(), Integer.parseInt(config.MVIP_POINTS_ADD));
 			AlonsoLeaguesAPI.removePoints(killer.getUniqueId(), Integer.parseInt(config.MVIP_POINTS_REMOVE));
-			/*
-			Common.dispatchCommand(Bukkit.getConsoleSender(), config.COMMAND_EXPERIENCE + killer.getName() + config.MVIP_EXPERIENCE);
-			Common.dispatchCommand(Bukkit.getConsoleSender(), config.COMMAND_MONEY + killer.getName() + config.MVIP_MONEY);
-			Common.dispatchCommand(Bukkit.getConsoleSender(), config.COMMAND_POINTS_ADD + killer.getName() + config.MVIP_POINTS_ADD);
-			Common.dispatchCommand(Bukkit.getConsoleSender(), config.COMMAND_POINTS_REMOVE + victim.getName() + config.MVIP_POINTS_REMOVE);
-			 */
 
 			messages_victim = config.MESSAGES_MVIP_VICTIM.stream().filter(Objects::nonNull).map(rawList -> rawList.
 					replace("{victim}", victim.getName()).
