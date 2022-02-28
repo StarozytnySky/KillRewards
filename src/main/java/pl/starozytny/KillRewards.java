@@ -26,7 +26,9 @@ public class KillRewards extends SimplePlugin {
 	protected void onPluginStart() {
 		registerEvents(new PlayerKill());
 		ConfigFile.getInstance();
-		Common.ADD_TELL_PREFIX = true;
+		Common.ADD_TELL_PREFIX = false;
+		Common.ADD_LOG_PREFIX = true;
+		Common.setLogPrefix("&f[&3KillRewards&f]");
 
 	}
 }

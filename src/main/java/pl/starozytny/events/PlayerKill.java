@@ -61,6 +61,11 @@ public class PlayerKill implements Listener {
 			Common.tell(victim, messages_victim);
 			Common.tell(killer, messages_killer);
 
+			if (config.DEBUG) {
+				Common.log("[Default Killer] Added " + config.DEFAULT_EXPERIENCE + " experience " + config.DEFAULT_MONEY + " money " + config.DEFAULT_POINTS_ADD + " points to player " + killer.getName() + " [killed player " + victim.getName() + "]");
+				Common.log("[Default Victim] Removed " + config.DEFAULT_POINTS_REMOVE + " points from player " + victim.getName() + " [killed by " + killer.getName() + "]");
+			}
+
 		} else if (PlayerUtil.hasPerm(killer, "mnoznik.vip")) {
 			AlonsoLevelsAPI.addExperience(killer.getUniqueId(), Integer.parseInt(config.VIP_EXPERIENCE));
 			playerKiller.addMysteryDust(Integer.parseInt(config.VIP_MONEY));
@@ -87,6 +92,11 @@ public class PlayerKill implements Listener {
 			Common.tell(victim, messages_victim);
 			Common.tell(killer, messages_killer);
 
+			if (config.DEBUG) {
+				Common.log("[Vip Killer] Added " + config.DEFAULT_EXPERIENCE + " experience " + config.DEFAULT_MONEY + " money " + config.DEFAULT_POINTS_ADD + " points to player " + killer.getName() + " [killed player " + victim.getName() + "]");
+				Common.log("[Vip Victim] Removed " + config.DEFAULT_POINTS_REMOVE + " points from player " + victim.getName() + " [killed by " + killer.getName() + "]");
+			}
+
 		} else if (PlayerUtil.hasPerm(killer, "mnoznik.vip+")) {
 			AlonsoLevelsAPI.addExperience(killer.getUniqueId(), Integer.parseInt(config.SVIP_EXPERIENCE));
 			playerKiller.addMysteryDust(Integer.parseInt(config.SVIP_MONEY));
@@ -112,7 +122,12 @@ public class PlayerKill implements Listener {
 			Common.tell(victim, messages_victim);
 			Common.tell(killer, messages_killer);
 
-		} else if (PlayerUtil.hasPerm(killer, "mnoznik.vip+")) {
+			if (config.DEBUG) {
+				Common.log("[SVip Killer] Added " + config.DEFAULT_EXPERIENCE + " experience " + config.DEFAULT_MONEY + " money " + config.DEFAULT_POINTS_ADD + " points to player " + killer.getName() + " [killed player " + victim.getName() + "]");
+				Common.log("[SVip Victim] Removed " + config.DEFAULT_POINTS_REMOVE + " points from player " + victim.getName() + " [killed by " + killer.getName() + "]");
+			}
+
+		} else if (PlayerUtil.hasPerm(killer, "mnoznik.mvp")) {
 			AlonsoLevelsAPI.addExperience(killer.getUniqueId(), Integer.parseInt(config.MVIP_EXPERIENCE));
 			playerKiller.addMysteryDust(Integer.parseInt(config.MVIP_MONEY));
 			AlonsoLeaguesAPI.addPoints(killer.getUniqueId(), Integer.parseInt(config.MVIP_POINTS_ADD));
@@ -136,6 +151,12 @@ public class PlayerKill implements Listener {
 
 			Common.tell(victim, messages_victim);
 			Common.tell(killer, messages_killer);
+
+			if (config.DEBUG) {
+				Common.log("[MVip Killer] Added " + config.DEFAULT_EXPERIENCE + " experience " + config.DEFAULT_MONEY + " money " + config.DEFAULT_POINTS_ADD + " points to player " + killer.getName() + " [killed player " + victim.getName() + "]");
+				Common.log("[MVip Victim] Removed " + config.DEFAULT_POINTS_REMOVE + " points from player " + victim.getName() + " [killed by " + killer.getName() + "]");
+			}
+
 		}
 	}
 }

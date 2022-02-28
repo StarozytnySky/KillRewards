@@ -51,6 +51,8 @@ public class ConfigFile extends YamlConfig {
 	public List<String> MESSAGES_MVIP_VICTIM;
 	public List<String> MESSAGES_MVIP_KILLER;
 
+	public Boolean DEBUG;
+
 	public ConfigFile() {
 
 		this.loadConfiguration(this.getSettingsFileName());
@@ -102,6 +104,9 @@ public class ConfigFile extends YamlConfig {
 
 		MESSAGES_MVIP_VICTIM = getStringList("Messages.mvip.victim");
 		MESSAGES_MVIP_KILLER = getStringList("Messages.mvip.killer");
+
+		DEBUG = getBoolean("Settings.Debug");
+
 	}
 
 	/**

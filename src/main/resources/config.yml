@@ -1,4 +1,5 @@
 Settings:
+  Debug: false
   Rewards:
     default:
       experience: 1
@@ -34,14 +35,14 @@ Settings:
 Messages:
   default:
     victim:
-      - "&c{victim} &zostal zabity przez &3{killer}"
+      - "&c{victim} &7zostal zabity przez &3{killer}"
       - " "
       - "                &f-{points_remove} punkt &7(Smierc)"
       - " "
     killer:
-      - "&c{victim} &zostal zabity przez &3{killer}"
+      - "&c{victim} &7zostal zabity przez &3{killer}"
       - " "
-      - "&d{experience}   &f+{points_add}   &e{money} &7(Zabojstwo)"
+      - "&d{experience} doświadczenia   &f+{points_add} punktów   &e{money} coinów &7(Zabojstwo)"
       - " "
   vip:
     victim:
@@ -52,33 +53,33 @@ Messages:
     killer:
       - "&c{victim} &zostal zabity przez &3{killer}"
       - " "
-      - "&d{experience}   &f+{points_add}   &e{money} &7(Zabojstwo)"
+      - "&d{experience} doświadczenia   &f+{points_add} punktów   &e{money} coinów &7(Zabojstwo)"
       - " "
       - "                                      &b(Mnoznik: 20%)"
       - " "
   svip:
     victim:
-      - "&c{victim} &zostal zabity przez &3{killer}"
+      - "&c{victim} &7zostal zabity przez &3{killer}"
       - " "
       - "                &f-{points_remove} punkt &7(Smierc)"
       - " "
     killer:
-      - "&c{victim} &zostal zabity przez &3{killer}"
+      - "&c{victim} &7zostal zabity przez &3{killer}"
       - " "
-      - "&d{experience}   &f+{points_add}   &e{money} &7(Zabojstwo)"
+      - "&d{experience} doświadczenia   &f+{points_add} punktów   &e{money} coinów &7(Zabojstwo)"
       - " "
       - "                                      &b(Mnoznik: 50%)"
       - " "
   mvip:
     victim:
-      - "&c{victim} &zostal zabity przez &3{killer}"
+      - "&c{victim} &7zostal zabity przez &3{killer}"
       - " "
       - "                &f-{points_remove} punkt &7(Smierc)"
       - " "
     killer:
-      - "&c{victim} &zostal zabity przez &3{killer}"
+      - "&c{victim} &7zostal zabity przez &3{killer}"
       - " "
-      - "&d{experience}   &f+{points_add}   &e{money} &7(Zabojstwo)"
+      - "&d{experience} doświadczenia   &f+{points_add} punktów   &e{money} coinów &7(Zabojstwo)"
       - " "
       - "                                      &b(Mnoznik: 100%)"
       - " "
