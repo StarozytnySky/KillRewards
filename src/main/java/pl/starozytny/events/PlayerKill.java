@@ -40,7 +40,7 @@ public class PlayerKill implements Listener {
 			AlonsoLevelsAPI.addExperience(killer.getUniqueId(), Integer.parseInt(config.DEFAULT_EXPERIENCE));
 			playerKiller.addMysteryDust(Integer.parseInt(config.DEFAULT_MONEY));
 			AlonsoLeaguesAPI.addPoints(killer.getUniqueId(), Integer.parseInt(config.DEFAULT_POINTS_ADD));
-			AlonsoLeaguesAPI.removePoints(killer.getUniqueId(), Integer.parseInt(config.DEFAULT_POINTS_REMOVE));
+			AlonsoLeaguesAPI.removePoints(victim.getUniqueId(), Integer.parseInt(config.DEFAULT_POINTS_REMOVE));
 
 			messages_victim = config.MESSAGES_DEFAULT_VICTIM.stream().filter(Objects::nonNull).map(rawList -> rawList.
 					replace("{victim}", victim.getName()).
@@ -70,7 +70,7 @@ public class PlayerKill implements Listener {
 			AlonsoLevelsAPI.addExperience(killer.getUniqueId(), Integer.parseInt(config.VIP_EXPERIENCE));
 			playerKiller.addMysteryDust(Integer.parseInt(config.VIP_MONEY));
 			AlonsoLeaguesAPI.addPoints(killer.getUniqueId(), Integer.parseInt(config.VIP_POINTS_ADD));
-			AlonsoLeaguesAPI.removePoints(killer.getUniqueId(), Integer.parseInt(config.VIP_POINTS_REMOVE));
+			AlonsoLeaguesAPI.removePoints(victim.getUniqueId(), Integer.parseInt(config.VIP_POINTS_REMOVE));
 
 			messages_victim = config.MESSAGES_VIP_VICTIM.stream().filter(Objects::nonNull).map(rawList -> rawList.
 					replace("{victim}", victim.getName()).
@@ -101,7 +101,7 @@ public class PlayerKill implements Listener {
 			AlonsoLevelsAPI.addExperience(killer.getUniqueId(), Integer.parseInt(config.SVIP_EXPERIENCE));
 			playerKiller.addMysteryDust(Integer.parseInt(config.SVIP_MONEY));
 			AlonsoLeaguesAPI.addPoints(killer.getUniqueId(), Integer.parseInt(config.SVIP_POINTS_ADD));
-			AlonsoLeaguesAPI.removePoints(killer.getUniqueId(), Integer.parseInt(config.SVIP_POINTS_REMOVE));
+			AlonsoLeaguesAPI.removePoints(victim.getUniqueId(), Integer.parseInt(config.SVIP_POINTS_REMOVE));
 
 			messages_victim = config.MESSAGES_SVIP_VICTIM.stream().filter(Objects::nonNull).map(rawList -> rawList.
 					replace("{victim}", victim.getName()).
@@ -131,7 +131,7 @@ public class PlayerKill implements Listener {
 			AlonsoLevelsAPI.addExperience(killer.getUniqueId(), Integer.parseInt(config.MVIP_EXPERIENCE));
 			playerKiller.addMysteryDust(Integer.parseInt(config.MVIP_MONEY));
 			AlonsoLeaguesAPI.addPoints(killer.getUniqueId(), Integer.parseInt(config.MVIP_POINTS_ADD));
-			AlonsoLeaguesAPI.removePoints(killer.getUniqueId(), Integer.parseInt(config.MVIP_POINTS_REMOVE));
+			AlonsoLeaguesAPI.removePoints(victim.getUniqueId(), Integer.parseInt(config.MVIP_POINTS_REMOVE));
 
 			messages_victim = config.MESSAGES_MVIP_VICTIM.stream().filter(Objects::nonNull).map(rawList -> rawList.
 					replace("{victim}", victim.getName()).
