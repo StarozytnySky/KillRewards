@@ -27,9 +27,15 @@
 
     <dependencies>
         <dependency>
-            <groupId>${foundation.path}</groupId>
+            <groupId>com.github.kangarko</groupId>
             <artifactId>Foundation</artifactId>
             <version>${foundation.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.mineacademy.plugin</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
